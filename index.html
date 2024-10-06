@@ -7,7 +7,14 @@
     <meta name="author" content="ijse">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nehara Peiris 1</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <title>Nehara Peiris</title>
 
     <style>
 
@@ -22,6 +29,7 @@
             color: #333;
             line-height: 1.6;
         }
+
 
         /*  header section */
         header {
@@ -52,13 +60,15 @@
             padding: 0 1rem;
         }
 
+
+
         /* Hero Section */
         .hero {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 2rem;
-            background: #f4f4f4;
+            background: seashell;
             height: 100vh; /* Full viewport height */
         }
 
@@ -102,6 +112,8 @@
             vertical-align: middle;
         }
 
+
+
         /* About me Section */
         .about-me {
             display: flex;
@@ -125,11 +137,133 @@
         }
 
 
+        /*Blog section*/
+        .blog {
+            padding: 2rem;
+            background: #f9f9f9;
+        }
+
+        .blog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .blog-header button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .blog-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .blog-cards img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .articles {
+            padding: 2rem;
+        }
+
+        .article-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .articles img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .projects {
+            padding: 2rem;
+            background: #f4f4f4;
+        }
+
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .project-cards img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .skills {
+            padding: 2rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skills-grid img {
+            margin: 0.5rem;
+        }
+
+        .education {
+            padding: 2rem;
+        }
+
+        .education-list {
+            list-style: none;
+        }
+
+        .education-list div {
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            padding: 2rem;
+            background: #f4f4f4;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 0.5rem 0;
+        }
+
+        form input, form textarea {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        form button {
+            padding: 0.5rem;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
     </style>
-
-
 </head>
-
 
 <body>
 
@@ -157,7 +291,7 @@
         <button class="hero-button">Let's Talk</button>
     </div>
     <div class="hero-image" data-aos="zoom-out-up">
-        <img src="assets/images/neha%20bw.png" title="Nehara" alt="Nehara Peiris" width="450">
+        <img src="assets/images/neha%20bw.png" title="Nehara" alt="Nehara Peiris" width="1000">
     </div>
     <div class="hero-social">
         <a href="mailto:shewmipeiris123@gmail.com" target="_blank">
@@ -349,3 +483,4 @@
 
 </body>
 </html>
+
