@@ -7,262 +7,11 @@
     <meta name="author" content="ijse">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    <link rel="stylesheet" href="assets/style/normalize.css">
+    <link rel="stylesheet" href="assets/style/style.css">
 
     <title>Nehara Peiris</title>
 
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-
-
-        /*  header section */
-        header {
-            background: black;
-            color: #fff;
-            height: 100px;
-            width: 100%;
-
-            position: fixed;
-            top: 0px;
-            left: 0px;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content:space-between;
-            align-items: center;
-
-        }
-
-        .header-content img {
-            margin-left: 1rem;
-        }
-
-        header nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0 1rem;
-        }
-
-
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem;
-            background: seashell;
-            height: 100vh; /* Full viewport height */
-        }
-
-        .hero-text {
-            max-width: 50%;
-        }
-
-        .hero-text h1 {
-            font-size: 2.5rem;
-        }
-
-        .hero-text h2 {
-            font-size: 1.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .hero-button {
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .hero-image img {
-            border-radius: 10px;
-            max-width: 100%; /* Ensure image resizes correctly */
-        }
-
-        .hero-social {
-            margin-top: 1rem;
-        }
-
-        .hero-social a {
-            margin-right: 0.5rem;
-        }
-
-        .hero-social img {
-            vertical-align: middle;
-        }
-
-
-
-        /* About me Section */
-        .about-me {
-            display: flex;
-            align-items: center;
-            padding: 2rem;
-            background: #fff;
-        }
-
-        .about-me-image img {
-            border-radius: 10px;
-            max-width: 100%;
-        }
-
-        .about-me-text {
-            margin-left: 2rem;
-            max-width: 60%;
-        }
-
-        .about-me-social {
-            margin-top: 1rem;
-        }
-
-
-        /*Blog section*/
-        .blog {
-            padding: 2rem;
-            background: #f9f9f9;
-        }
-
-        .blog-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .blog-header button {
-            background: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-        }
-
-        .blog-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .blog-cards img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .articles {
-            padding: 2rem;
-        }
-
-        .article-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-
-        .articles img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .projects {
-            padding: 2rem;
-            background: #f4f4f4;
-        }
-
-        .project-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-
-        .project-cards img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .skills {
-            padding: 2rem;
-        }
-
-        .skills-grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .skills-grid img {
-            margin: 0.5rem;
-        }
-
-        .education {
-            padding: 2rem;
-        }
-
-        .education-list {
-            list-style: none;
-        }
-
-        .education-list div {
-            margin-bottom: 1rem;
-        }
-
-        .contact {
-            padding: 2rem;
-            background: #f4f4f4;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        form label {
-            margin: 0.5rem 0;
-        }
-
-        form input, form textarea {
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        form button {
-            padding: 0.5rem;
-            background: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -270,29 +19,36 @@
 <!--Header Section-->
 <header>
     <div class="header-content">
-        <img src="assets/images/logo.png" title="Logo" alt="Logo" width="100">
+        <a href="index.html"><img src="assets/images/logo.png" title="Logo" alt="Logo" width="100"></a>
         <nav>
-            <a href="#">Gallery</a>
-            <a href="#">Activities</a>
-            <a href="#">Projects</a>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
-            <a href="#">Contact</a>
+            <a href="#aboutme">About me</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#activities">Activities</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
         </nav>
     </div>
 </header>
 
+
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-text">
-        <h2>Hello</h2>
-        <h1 class="animate__heartBeat">I'm Nehara Peiris</h1>
-        <h2>Software Engineer</h2>
-        <button class="hero-button">Let's Talk</button>
+
+    <div class="hero-content">
+        <div class="hero-text">
+            <h2>Hello</h2>
+            <h1 class="animate__heartBeat">I'm Nehara Peiris</h1>
+            <h2>Software Engineer</h2>
+            <button class="hero-button">Let's Talk</button>
+        </div>
+
+        <div class="hero-image" data-aos="zoom-out-up">
+            <img src="assets/images/neha%20bw.png" title="Nehara" alt="Nehara Peiris" width="700">
+        </div>
     </div>
-    <div class="hero-image" data-aos="zoom-out-up">
-        <img src="assets/images/neha%20bw.png" title="Nehara" alt="Nehara Peiris" width="1000">
-    </div>
+
     <div class="hero-social">
         <a href="mailto:shewmipeiris123@gmail.com" target="_blank">
             <img src="assets/images/socialMedia/email%20logo.png" alt="Email" width="40">
@@ -310,17 +66,26 @@
             <img src="assets/images/socialMedia/linkedin%20logo.png" alt="LinkedIn" width="40">
         </a>
     </div>
+
 </section>
 
+
+
 <!-- About Me Section -->
-<section class="about-me">
-    <div class="about-me-image" data-aos="zoom-out-up">
-        <img src="assets/images/neha-removebg.png" title="Nehara" alt="Nehara Peiris">
+<section class="about-me" id="aboutme">
+
+    <div class="about-me-content">
+        <div class="about-me-image">
+            <img src="assets/images/neha-removebg.png" title="Nehara" alt="Nehara Peiris">
+        </div>
+
+        <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores dicta fugiat, hic incidunt laboriosam libero nostrum possimus praesentium quaerat, reprehenderit similique sit ullam. Alias aperiam eveniet inventore nam qui.</p>
+        </div>
     </div>
-    <div class="about-me-text">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores dicta fugiat, hic incidunt laboriosam libero nostrum possimus praesentium quaerat, reprehenderit similique sit ullam. Alias aperiam eveniet inventore nam qui.</p>
-    </div>
+
+
     <div class="about-me-social">
         <!-- Social Media Icons -->
         <a href="mailto:shewmipeiris123@gmail.com" target="_blank">
@@ -475,11 +240,72 @@
     <p>&copy; 2024 Nehara Peiris. All rights reserved.</p>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script>
-    AOS.init();
-</script>
+
+
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">About</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Services</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 
 </body>
 </html>
