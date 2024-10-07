@@ -105,9 +105,10 @@ header nav a {
 .about-me-content{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 2rem;
     background: #fff;
+    margin-top: 110px;
 
 }
 
@@ -128,7 +129,6 @@ header nav a {
     h2{
         font-size: xxx-large;
     }
-
     p{
         font-size: large;
     }
@@ -141,10 +141,12 @@ header nav a {
 }
 
 
+
 /*Blog section*/
 .blog {
     padding: 2rem;
     background: #f9f9f9;
+    height: 100vh;
 }
 
 .blog-header {
@@ -152,6 +154,7 @@ header nav a {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    margin-top: 105px;
 }
 
 .blog-header button {
@@ -174,6 +177,10 @@ header nav a {
     border-radius: 10px;
 }
 
+
+
+
+
 .articles {
     padding: 2rem;
 }
@@ -188,6 +195,9 @@ header nav a {
     width: 100%;
     border-radius: 10px;
 }
+
+
+
 
 .projects {
     padding: 2rem;
