@@ -168,7 +168,7 @@ header nav a {
 
 .blog-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
 }
 
@@ -180,34 +180,44 @@ header nav a {
 
 
 
-
+/*Articles Section*/
 .articles {
+    height: 100vh;
     padding: 2rem;
+    h2{
+        margin-top: 120px;
+    }
+    background: black;
 }
 
 .article-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .articles img {
-    width: 100%;
+    width: 75%;
     border-radius: 10px;
 }
 
 
 
-
+/*Project Section*/
 .projects {
     padding: 2rem;
     background: #f4f4f4;
+    height: 100vh;
+    h2{
+        margin-top: 120px;
+    }
 }
 
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
+    margin-top: 50px;
 }
 
 .project-cards img {
@@ -215,6 +225,9 @@ header nav a {
     border-radius: 10px;
 }
 
+
+
+/*Skills Section*/
 .skills {
     padding: 2rem;
 }
