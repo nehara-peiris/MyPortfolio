@@ -11,6 +11,9 @@ body {
 }
 
 
+
+
+
 /*  header section */
 header {
     background: black;
@@ -21,6 +24,8 @@ header {
     position: fixed;
     top: 0px;
     left: 0px;
+
+    z-index: 10;
 }
 
 .header-content {
@@ -42,35 +47,38 @@ header nav a {
 
 
 
+
+
 /* Hero Section */
 .hero {
+    position: relative; /* Make the hero section a positioned element */
     height: 100vh;
     width: 100vw;
-    background: yellowgreen;
-
+    background: radial-gradient(circle, black 0%, black 25%, yellow 50%, orange 75%, orangered 100%);
+    overflow: hidden;
 }
 
 .hero-content{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5rem;
     background: #070707;
     overflow: hidden;
 }
 
 .hero-text {
     max-width: 50%;
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
 }
 
-.hero-text h1 {
-    font-size: 2.5rem;
-}
-
-.hero-text h2 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-}
 
 .hero-button {
     margin-top: 1rem;
@@ -82,10 +90,25 @@ header nav a {
     cursor: pointer;
 }
 
-.hero-image img {
-    border-radius: 10px;
-    max-width: 100%;
+.hero-image {
+    z-index: 5;
+
+    img {
+        max-width: 96%;
+    }
 }
+
+#circle {
+    position: absolute;
+    right: 300px;
+    bottom: 100px;
+    width: 700px;
+    height: 900px;
+    border-bottom-left-radius: 50%;
+    background: linear-gradient(to bottom ,#070707, black, orange, black, orangered ,black, orange, black, #070707);
+    rotate: -60deg;
+}
+
 
 .hero-social {
     margin-top: 1rem;
@@ -95,18 +118,21 @@ header nav a {
 
 
 
+
+
 /* About me Section */
 .about-me {
     height: 100vh;
     width: 100vw;
-    background: yellowgreen;
+    background: radial-gradient(circle, black 0%, black 25%, yellow 50%, orange 75%, orangered 100%);
+    overflow: hidden;
 }
 
 .about-me-content{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 2rem;
+    padding: 5rem;
     background: #fff;
     margin-top: 110px;
 
@@ -139,6 +165,8 @@ header nav a {
     margin-left: 2rem;
     align-content: center;
 }
+
+
 
 
 
@@ -180,9 +208,9 @@ header nav a {
 
 
 
+
 /*Articles Section*/
 .articles {
-    height: 100vh;
     padding: 2rem;
     h2{
         margin-top: 120px;
@@ -200,6 +228,8 @@ header nav a {
     width: 75%;
     border-radius: 10px;
 }
+
+
 
 
 
@@ -227,6 +257,8 @@ header nav a {
 
 
 
+
+
 /*Skills Section*/
 .skills {
     padding: 2rem;
@@ -242,6 +274,11 @@ header nav a {
     margin: 0.5rem;
 }
 
+
+
+
+
+/*Education Section*/
 .education {
     padding: 2rem;
 }
@@ -254,6 +291,11 @@ header nav a {
     margin-bottom: 1rem;
 }
 
+
+
+
+
+/*Contact Section*/
 .contact {
     padding: 2rem;
     background: #f4f4f4;
@@ -282,6 +324,11 @@ form button {
     cursor: pointer;
 }
 
+
+
+
+
+/*Footer Section*/
 footer {
     background: #333;
     color: #fff;
