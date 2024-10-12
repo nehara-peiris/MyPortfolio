@@ -11,7 +11,6 @@ body {
 }
 
 
-
 /*  header section */
 header {
     background: black;
@@ -51,7 +50,7 @@ header nav a {
 .hero {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: radial-gradient(circle, black 0%, black 25%, yellow 50%, orange 75%, orangered 100%);
     overflow: hidden;
 }
@@ -123,7 +122,7 @@ header nav a {
 /* About me Section */
 .about-me {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: radial-gradient(circle, black 0%, black 25%, yellow 50%, orange 75%, orangered 100%);
     overflow: hidden;
 }
@@ -172,15 +171,14 @@ header nav a {
 
 /* Blog section */
 .blog {
-    padding: 1rem;
-    background: linear-gradient(to bottom ,#070707, orange ,black, orange, black);
+    width: 100%;
     min-height: 100vh;
+    background: linear-gradient(to bottom ,#070707, orange ,black, orange, black);
+    color: white;
+    padding: 2rem;
 }
 
-.blog-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.blog h2 {
     margin-bottom: 1rem;
     color: white;
 }
@@ -188,7 +186,9 @@ header nav a {
 .blog-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .blog-cards div {
@@ -208,12 +208,13 @@ header nav a {
 
 
 
-/*Articles Section*/
+/* Articles Section */
 .articles {
     padding: 2rem;
-    background: black;
+    background: linear-gradient(to bottom ,#070707, orange ,black, orange, black);
     color: white;
     min-height: 100vh;
+    width: 100%;
 }
 
 h2 {
@@ -229,7 +230,7 @@ h2 {
 }
 
 .articles img {
-    width: 80%;
+    width: 70%;
     border-radius: 10px;
 }
 
@@ -253,16 +254,13 @@ h2 {
 /* Project Section */
 .projects {
     min-height: 100vh;
+    width: 100%;
     padding: 2rem;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    background: linear-gradient(to bottom ,#070707, orange ,black, orange, black);
 }
 
 .projects h2 {
-    margin-top: 120px;
+    margin-top: 105px;
 }
 
 .project-cards {
@@ -274,8 +272,9 @@ h2 {
 }
 
 .project-cards div {
-    background: white;
+    background: #1C1C1C;
     border-radius: 10px;
+    border: 2px yellow solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     display: flex;
@@ -291,10 +290,24 @@ h2 {
 
 .project-cards h3 {
     margin: 1rem 0 0.5rem;
+    color: white;
 }
 
 .project-cards p {
     text-align: center;
+    color: wheat;
+}
+
+.project-cards button{
+    color: white;
+    background-color: #B57C00;
+    width: 40%;
+    height: 40px;
+    border: peru 2px solid;
+}
+
+.project-cards button:hover{
+    background-color: goldenrod;
 }
 
 
@@ -326,7 +339,7 @@ h2 {
     display: block;
     height: 250px;
     width: 250px;
-    background-color: blue;
+    background-color: goldenrod;
     color: white;
     text-align: center;
     line-height: 250px;
@@ -337,15 +350,18 @@ h2 {
 }
 
 .assignment-cards a:hover {
-    background-color: darkblue;
+    background-color: orange;
 }
 
 
 
-/*Skills Section*/
+
+
+/* Skills Section */
 .skills {
     padding: 2rem;
     min-height: 100vh;
+    width: 100%;
 }
 
 .skills-grid {
@@ -367,6 +383,7 @@ h2 {
 /* Education Section */
 .education {
     min-height: 100vh;
+    width: 100%;
     padding: 2rem;
     background: #f4f4f4;
 }
@@ -408,11 +425,12 @@ h2 {
 
 
 
-/*Contact Section*/
+/* Contact Section */
 .contact {
     min-height: 100vh;
     padding: 2rem;
     background: #f4f4f4;
+    width: 100%;
 }
 
 .contact h2{
@@ -446,7 +464,7 @@ form button {
 
 
 
-/*Footer Section*/
+/* Footer Section */
 footer {
     background: #333;
     color: #fff;
