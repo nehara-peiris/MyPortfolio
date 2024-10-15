@@ -248,17 +248,17 @@ header nav a {
 
 .about-me-social {
     margin-top: 1rem;
+    margin-left: 2rem;
+    align-content: center;
     display: flex;
-    justify-content: center;
 }
 
 .about-me-social a {
     margin: 0 10px;
-    transition: transform 0.3s ease;
 }
 
 .about-me-social img:hover {
-    transform: scale(1.1); /* Hover effect for social icons */
+    transform: scale(1.1);
 }
 
 /* Media Queries for smaller screens */
@@ -384,7 +384,9 @@ h2 {
 }
 
 .projects h2 {
-    margin-top: 105px;
+    color: white;
+    margin-top: 120px;
+    margin-left: 30px;
 }
 
 .project-cards {
@@ -450,8 +452,9 @@ h2 {
 }
 
 .assignment h2 {
-    margin-top: 105px;
-    margin-bottom: 20px;
+    color: white;
+    margin-top: 120px;
+    margin-left: 30px;
 }
 
 .assignment-cards {
@@ -494,12 +497,49 @@ h2 {
 
 .skills-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 2.5rem; /* Adds more space between the cards */
 }
 
-.skills-grid img {
-    margin: 0.5rem;
+.skill-card {
+    background-color: #fff;
+    width: 150px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Card shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.skill-card img {
+    width: 80px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px); /* Moves card up slightly on hover */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Deepen the shadow */
+}
+
+.skill-card:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
 
 
@@ -516,9 +556,9 @@ h2 {
 }
 
 .education h2 {
+    color: white;
     margin-top: 120px;
-    margin-bottom: 1.5rem;
-    text-align: center;
+    margin-bottom: 30px;
 }
 
 .education-list {
@@ -559,7 +599,9 @@ h2 {
 }
 
 .contact h2{
+    color: white;
     margin-top: 120px;
+    margin-bottom: 30px;
 }
 
 form {
