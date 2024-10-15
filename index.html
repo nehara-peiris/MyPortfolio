@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="assets/style/style.css">
 
+
+    <link rel="icon" type="img/x-icon" href="assets/images/logo.png">
+
+
+
     <title>Nehara Peiris</title>
 
 </head>
@@ -20,7 +25,12 @@
 <header>
     <div class="header-content">
         <a href="index.html"><img src="assets/images/logo.png" title="Logo" alt="Logo" width="100"></a>
-        <nav>
+        <!-- Add the menu icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="assets/images/logo.png" alt="Menu" width="40">
+        </div>
+        <!-- Navigation links -->
+        <nav id="nav-links">
             <a href="#aboutme">About me</a>
             <a href="#gallery">Gallery</a>
             <a href="#articles">Articles</a>
@@ -32,6 +42,7 @@
         </nav>
     </div>
 </header>
+
 
 
 
@@ -184,19 +195,25 @@
             <button>View</button>
         </div>
         <div>
-            <img src="assets/images/projects/connect4img.jpeg" alt="Project 2" width="300">
+            <img src="assets/images/projects/mediaplayerimg.jpg" alt="Project 2" width="300">
             <h3>Project 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore! Laborum optio quas sunt?</p>
             <button>View</button>
         </div>
         <div>
-            <img src="assets/images/projects/connect4img.jpeg" alt="Project 3" width="300">
+            <img src="assets/images/projects/textToSpeechimg.jpeg" alt="Project 3" width="300">
             <h3>Project 3</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore! Laborum optio quas sunt?</p>
             <button>View</button>
         </div>
         <div>
-            <img src="assets/images/projects/connect4img.jpeg" alt="Project 4" width="300">
+            <img src="assets/images/projects/sga1img.jpg" alt="Project 4" width="300">
+            <h3>Project 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore! Laborum optio quas sunt?</p>
+            <button>View</button>
+        </div>
+        <div>
+            <img src="assets/images/projects/sga2img.jpg" alt="Project 4" width="300">
             <h3>Project 4</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore! Laborum optio quas sunt?</p>
             <button>View</button>
@@ -211,10 +228,10 @@
 <section class="assignment" id="assignment">
     <h2>Assignments</h2>
     <div class="assignment-cards">
-        <a href="https://example.com">Assignment 1</a>
-        <a href="https://example.com">Assignment 2</a>
-        <a href="https://example.com">Assignment 3</a>
-        <a href="https://example.com">Assignment 4</a>
+        <a href="Assignment.html/#assi1" target="_blank">Assignment 1</a>
+        <a href="Assignment.html/#assi2" target="_blank">Assignment 2</a>
+        <a href="Assignment.html/#assi3" target="_blank">Assignment 3</a>
+        <a href="Assignment.html/#assi4" target="_blank">Assignment 4</a>
     </div>
 </section>
 
@@ -336,6 +353,20 @@
         </div>
     </div>
 </footer>
+
+
+
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        if (navLinks.style.display === 'flex') {
+            navLinks.style.display = 'none';
+        } else {
+            navLinks.style.display = 'flex';
+        }
+    }
+</script>
 
 </body>
 </html>
