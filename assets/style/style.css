@@ -699,11 +699,92 @@ form button:hover {
 
 
 
-
 /* Footer Section */
 footer {
     background: #040D12;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.about-me-social {
+    margin-bottom: 1rem;
+}
+
+.about-me-social a {
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.about-me-social a:hover {
+    transform: scale(1.1);
+}
+
+.footer-links h2, .footer-right h2 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul, .footer-right address ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-right address li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a, .footer-right address a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover, .footer-right address a:hover {
+    text-decoration: underline;
+}
+
+
+.about-me-social {
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-social a {
+    transition: transform 0.3s;
+}
+
+.about-me-social a:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        padding: 1rem 0;
+        text-align: center;
+    }
 }
