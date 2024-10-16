@@ -90,7 +90,7 @@ header nav a {
     background: #070707;
     padding: 0 2rem;
     overflow: hidden;
-    /*text-align: center;*/
+    /* text-align: center; */
 }
 
 .hero-text {
@@ -116,7 +116,7 @@ header nav a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /*transition: background-color 0.3s ease;*/
+    /* transition: background-color 0.3s ease; */
 }
 
 .hero-button:hover {
@@ -296,7 +296,7 @@ header nav a {
 .blog {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom ,#070707, orange ,black, orange, black);
+    background: linear-gradient(to bottom ,#070707, black , black);
     color: white;
     padding: 2rem;
 }
@@ -398,6 +398,8 @@ h2 {
     height: 50%;
 }
 
+
+
 .project-cards div {
     background: #1C1C1C;
     border-radius: 10px;
@@ -407,6 +409,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.project-cards div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0px 30px rgba(255, 0, 0, 0.5);
 }
 
 .project-cards img {
@@ -481,6 +488,7 @@ h2 {
 
 .assignment-cards a:hover {
     background-color: orange;
+    box-shadow: 0 0px 30px rgba(228, 137, 0, 0.5);
 }
 
 
@@ -493,6 +501,7 @@ h2 {
     padding: 2rem;
     min-height: 100vh;
     width: 100%;
+    background: #0F0F0F;
 }
 
 .skills-grid {
@@ -500,15 +509,15 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2.5rem; /* Adds more space between the cards */
+    gap: 2.5rem;
 }
 
 .skill-card {
-    background-color: #fff;
+    background-color: #333333;
     width: 150px;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Card shadow */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
@@ -546,13 +555,12 @@ h2 {
 
 
 
-
 /* Education Section */
 .education {
     min-height: 100vh;
     width: 100%;
     padding: 2rem;
-    background: #f4f4f4;
+    background: #0F0F0F;
 }
 
 .education h2 {
@@ -569,7 +577,7 @@ h2 {
     justify-content: flex-start;
 }
 
-.education-list div {
+.edu-card{
     margin-bottom: 1rem;
     background: white;
     border-radius: 10px;
@@ -578,13 +586,15 @@ h2 {
     width: 100%;
     max-width: 600px;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.education-list div:hover {
+.edu-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 30px rgba(255, 157, 61, 0.5);
 }
-
 
 
 
@@ -594,7 +604,7 @@ h2 {
 .contact {
     min-height: 100vh;
     padding: 2rem;
-    background: #f4f4f4;
+    background: #0F0F0F;
     width: 100%;
 }
 
@@ -633,7 +643,7 @@ form button {
 
 /* Footer Section */
 footer {
-    background: #333;
+    background: #040D12;
     color: #fff;
     text-align: center;
     padding: 1rem;
