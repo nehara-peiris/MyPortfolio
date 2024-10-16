@@ -512,6 +512,14 @@ h2 {
     gap: 2.5rem;
 }
 
+.skills-cardset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
 .skill-card {
     background-color: #333333;
     width: 150px;
