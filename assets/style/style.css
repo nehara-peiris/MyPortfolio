@@ -1024,6 +1024,9 @@
             }
         }
 
+
+
+
         /* Achievements Section */
         .achievements-list {
             display: grid;
@@ -1070,8 +1073,24 @@
         }
 
         @media screen and (max-width: 768px) {
+
             .achievements-list {
-                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .achievement-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .achievement-card img {
+                margin-bottom: 1rem;
+                max-width: 100%; /* Ensure the image is responsive */
+            }
+
+            .achievement-card p {
+                font-size: 1em; /* Adjust font size for smaller screens */
             }
         }
 
@@ -1088,7 +1107,8 @@
             }
 
             .achievements-list {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                flex-direction: column;
+                text-align: center;
             }
 
             .achievement-card {
