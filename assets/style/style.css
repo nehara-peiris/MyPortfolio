@@ -59,6 +59,31 @@ body{
         display: none;
         cursor: pointer;
     }
+
+    @media (max-width: 768px) {
+        header nav {
+            display: none;
+            flex-direction: column;
+            background-color: black;
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: 100%;
+        }
+        header .menu-icon {
+            display: block;
+            right: 5%;
+        }
+
+
+        header nav a {
+            padding: 1rem;
+            text-align: center;
+            display: block;
+        }
+    }
+
+
 }
 
 
@@ -98,6 +123,7 @@ body{
         margin: 0;
         opacity: 1;
         animation: slideIn 1s forwards;
+        color: white;
     }
 
     .hero-button {
@@ -348,13 +374,13 @@ body{
     .project-cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 50px;
         width: 100%;
         height: 50%;
     }
 
-    .project-cards div {
+    .pr-card {
         background: #1C1C1C;
         border-radius: 10px;
         border: 2px yellow solid;
@@ -365,7 +391,7 @@ body{
         align-items: center;
     }
 
-    .project-cards div:hover{
+    .pr-card:hover{
         transform: translateY(-5px);
         box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
     }
@@ -386,15 +412,22 @@ body{
         color: wheat;
     }
 
-    .project-cards button{
-        color: white;
-        background-color: #B57C00;
-        width: 40%;
-        height: 40px;
-        border: peru 2px solid;
+    .pr-buttons{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
     }
 
-    .project-cards button:hover{
+    .pr-buttons button{
+        color: white;
+        background-color: #B57C00;
+        width: 50%;
+        height: 40px;
+        border: peru 2px solid;
+        margin: 30px;
+    }
+
+    .pr-buttons button:hover{
         background-color: goldenrod;
     }
 
