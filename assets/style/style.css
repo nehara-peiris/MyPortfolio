@@ -689,95 +689,95 @@
             background-color: orange;
             box-shadow: 0 0 30px rgba(228, 137, 0, 0.5);
         }
-    }
 
-    /* Media Queries for Responsiveness */
+        /* Media Queries for Responsiveness */
 
-    /* Mobile Small */
-    @media (max-width: 320px) {
-        .assignment h2 {
-            margin-left: 15px;
-            margin-top: 80px;
-            font-size: 20px; /* Adjust font size for small screens */
+        /* Mobile Small */
+        @media (max-width: 320px) {
+            .assignment h2 {
+                margin-left: 15px;
+                margin-top: 80px;
+                font-size: 20px; /* Adjust font size for small screens */
+            }
+
+            .assignment-cards {
+                grid-template-columns: 1fr; /* One column layout */
+                max-width: 90%; /* Full width */
+            }
+
+            .assignment-cards a {
+                height: 200px; /* Adjust card height */
+                font-size: 16px; /* Adjust font size */
+                line-height: 200px; /* Center text vertically */
+            }
         }
 
-        .assignment-cards {
-            grid-template-columns: 1fr; /* One column layout */
-            max-width: 90%; /* Full width */
+        /* Mobile Medium */
+        @media (max-width: 375px) {
+            .assignment h2 {
+                margin-left: 20px;
+                margin-top: 100px;
+            }
+
+            .assignment-cards {
+                grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+            }
+
+            .assignment-cards a {
+                height: 220px; /* Adjust card height */
+                font-size: 17px; /* Adjust font size */
+                line-height: 220px; /* Center text vertically */
+            }
         }
 
-        .assignment-cards a {
-            height: 200px; /* Adjust card height */
-            font-size: 16px; /* Adjust font size */
-            line-height: 200px; /* Center text vertically */
-        }
-    }
+        /* Mobile Large */
+        @media (max-width: 425px) {
+            .assignment h2 {
+                margin-left: 25px;
+                margin-top: 100px;
+            }
 
-    /* Mobile Medium */
-    @media (max-width: 375px) {
-        .assignment h2 {
-            margin-left: 20px;
-            margin-top: 100px;
+            .assignment-cards {
+                grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+            }
         }
 
-        .assignment-cards {
-            grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+        /* Tablet */
+        @media (max-width: 768px) {
+            .assignment h2 {
+                margin-left: 30px;
+                margin-top: 100px;
+            }
+
+            .assignment-cards {
+                grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+            }
         }
 
-        .assignment-cards a {
-            height: 220px; /* Adjust card height */
-            font-size: 17px; /* Adjust font size */
-            line-height: 220px; /* Center text vertically */
-        }
-    }
+        /* Laptop */
+        @media (max-width: 1024px) {
+            .assignment h2 {
+                margin-left: 30px;
+                margin-top: 100px;
+            }
 
-    /* Mobile Large */
-    @media (max-width: 425px) {
-        .assignment h2 {
-            margin-left: 25px;
-            margin-top: 100px;
-        }
-
-        .assignment-cards {
-            grid-template-columns: repeat(2, 1fr); /* Two columns layout */
-        }
-    }
-
-    /* Tablet */
-    @media (max-width: 768px) {
-        .assignment h2 {
-            margin-left: 30px;
-            margin-top: 100px;
+            .assignment-cards {
+                grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+                max-width: 80%; /* Increase width */
+            }
         }
 
-        .assignment-cards {
-            grid-template-columns: repeat(2, 1fr); /* Two columns layout */
-        }
-    }
+        /* Laptop Large */
+        @media (max-width: 1440px) {
+            .assignment h2 {
+                margin-left: 30px;
+                margin-top: 100px;
+            }
 
-    /* Laptop */
-    @media (max-width: 1024px) {
-        .assignment h2 {
-            margin-left: 30px;
-            margin-top: 100px;
-        }
-
-        .assignment-cards {
-            grid-template-columns: repeat(3, 1fr); /* Three columns layout */
-            max-width: 80%; /* Increase width */
-        }
-    }
-
-    /* Laptop Large */
-    @media (max-width: 1440px) {
-        .assignment h2 {
-            margin-left: 30px;
-            margin-top: 100px;
-        }
-
-        .assignment-cards {
-            grid-template-columns: repeat(3, 1fr); /* Three columns layout */
-            max-width: 80%; /* Increase width */
+            .assignment-cards {
+                grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+                max-width: 80%; /* Increase width */
+            }
         }
     }
 
@@ -965,7 +965,7 @@
 
 
     /* Education Section */
-    body{
+    body {
 
         .education {
             min-height: 100vh;
@@ -974,14 +974,13 @@
             background: #343a40;
         }
 
-
         .education h2 {
             color: white;
             margin-top: 120px;
             margin-bottom: 30px;
             padding-bottom: 20px;
+            text-align: center; /* Center text on small screens */
         }
-
 
         .education-list {
             display: flex;
@@ -990,8 +989,7 @@
             align-items: center;
         }
 
-
-        .edu-card{
+        .edu-card {
             margin-bottom: 1rem;
             background: white;
             border-radius: 10px;
@@ -1005,12 +1003,10 @@
             justify-content: space-around;
         }
 
-
         .edu-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 0 30px rgba(255, 157, 61, 0.5);
         }
-
 
         @media screen and (max-width: 768px) {
             .edu-card {
@@ -1018,12 +1014,15 @@
                 text-align: center;
             }
 
-
             .edu-card img {
                 margin-bottom: 1rem;
+                max-width: 100%; /* Ensure the image is responsive */
+            }
+
+            .education h2 {
+                font-size: 1.8em; /* Adjust font size for smaller screens */
             }
         }
-
 
         /* Achievements Section */
         .achievements-list {
@@ -1033,7 +1032,6 @@
             justify-items: center;
             padding: 1rem;
         }
-
 
         .achievement-card {
             background: white;
@@ -1045,7 +1043,6 @@
             width: 100%;
             max-width: 450px;
         }
-
 
         .achievement-card:hover {
             transform: translateY(-10px);
@@ -1059,6 +1056,7 @@
         .achievement-card img {
             width: 300px;
             margin-bottom: 1rem;
+            max-width: 100%; /* Ensure the image is responsive */
         }
 
         .achievement-card h3 {
@@ -1077,6 +1075,78 @@
             }
         }
 
+        /* Additional Media Queries for Responsiveness */
+
+        /* Mobile Small */
+        @media (max-width: 320px) {
+            .education h2 {
+                font-size: 1.5em; /* Adjust heading size */
+            }
+
+            .edu-card {
+                padding: 0.5rem; /* Adjust padding */
+            }
+
+            .achievement-card {
+                padding: 1.5rem; /* Adjust padding */
+            }
+
+            .achievement-card h3 {
+                font-size: 1.1rem; /* Adjust heading size */
+            }
+        }
+
+        /* Mobile Medium */
+        @media (max-width: 375px) {
+            .education h2 {
+                font-size: 1.7em; /* Adjust heading size */
+            }
+
+            .edu-card {
+                padding: 0.75rem; /* Adjust padding */
+            }
+
+            .achievement-card {
+                padding: 1.75rem; /* Adjust padding */
+            }
+        }
+
+        /* Mobile Large */
+        @media (max-width: 425px) {
+            .education h2 {
+                font-size: 1.8em; /* Adjust heading size */
+            }
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .achievements-list {
+                grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+            }
+
+            .achievement-card {
+                max-width: 100%; /* Ensure cards take full width */
+            }
+        }
+
+        /* Laptop */
+        @media (max-width: 1024px) {
+            .achievements-list {
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust column width */
+            }
+
+            .edu-card {
+                max-width: 90%; /* Slightly reduce max-width */
+            }
+        }
+
+        /* Laptop Large */
+        @media (max-width: 1440px) {
+            .achievements-list {
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Adjust column width */
+            }
+        }
+
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -1092,7 +1162,6 @@
             animation: fadeInUp 0.6s ease-out;
         }
     }
-
 
 
     /* Contact Section */
