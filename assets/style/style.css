@@ -1071,7 +1071,7 @@
 
         @media screen and (max-width: 768px) {
             .achievements-list {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             }
         }
 
@@ -1085,6 +1085,10 @@
 
             .edu-card {
                 padding: 0.5rem; /* Adjust padding */
+            }
+
+            .achievements-list {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
 
             .achievement-card {
@@ -1116,12 +1120,16 @@
             .education h2 {
                 font-size: 1.8em; /* Adjust heading size */
             }
+
+            .achievements-list {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
         }
 
         /* Tablet */
         @media (max-width: 768px) {
             .achievements-list {
-                grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             }
 
             .achievement-card {
@@ -1132,7 +1140,7 @@
         /* Laptop */
         @media (max-width: 1024px) {
             .achievements-list {
-                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust column width */
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             }
 
             .edu-card {
@@ -1143,7 +1151,7 @@
         /* Laptop Large */
         @media (max-width: 1440px) {
             .achievements-list {
-                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Adjust column width */
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             }
         }
 
