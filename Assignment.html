@@ -3,57 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="img/x-icon" href="assets/images/headerNhero/logo.png">
-
     <title>Assignments</title>
-
-
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <style>
-        section{
-            height: 100vh;
+        section {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(120deg, #0F0F0F, #000000);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin: 2rem;
+            color: #ff8c42;
+            text-align: left;
+        }
+
+        .case-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Individual Case Card */
+        .case-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        /* Buttons */
+        .case-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .button-demo {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .button-demo:hover {
+            background-color: #45a049;
+        }
+
+        .button-view {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .button-view:hover {
+            background-color: #0b7dda;
         }
     </style>
-
 </head>
 <body>
 
-<section id="assi1">assi1
-    <div class="project-cards">
-        <div>
-            <img src="assets/images/projects/connect4img.jpeg" alt="Project 1" width="300">
-            <h3>Project 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore! Laborum optio quas sunt?</p>
-            <button>View</button>
+<section id="assi1">
+
+    <h2>Assignment 1</h2>
+
+    <div class="case-container">
+
+        <div class="case-card">
+            <img src="assets/images/assignments/case1-image.png" alt="Case 1 Image">
+            <h3>Case 1</h3>
+            <p>A brief description of Case 1. This is where you summarize the main points.</p>
+
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+
         </div>
-        <div>
-            <img src="assets/images/projects/connect4img.jpeg" alt="Project 2" width="300">
-            <h3>Project 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore! Laborum optio quas sunt?</p>
-            <button>View</button>
+
+
+        <div class="case-card">
+            <img src="assets/images/assignments/case2-image.png" alt="Case 2 Image">
+            <h3>Case 2</h3>
+            <p>A brief description of Case 2. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
         </div>
-        <div>
-            <img src="assets/images/projects/connect4img.jpeg" alt="Project 3" width="300">
-            <h3>Project 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore! Laborum optio quas sunt?</p>
-            <button>View</button>
-        </div>
-        <div>
-            <img src="assets/images/projects/connect4img.jpeg" alt="Project 4" width="300">
-            <h3>Project 4</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore! Laborum optio quas sunt?</p>
-            <button>View</button>
+        <div class="case-card">
+            <img src="assets/images/assignments/case3-image.png" alt="Case 3 Image">
+            <h3>Case 3</h3>
+            <p>A brief description of Case 3. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
         </div>
     </div>
-
 </section>
 
-<section id="assi2">assi2</section>
+<section id="assi2">
+    <h2>Assignment 2</h2>
+    <div class="case-container">
+        <div class="case-card">
+            <img src="assets/images/assignments/case1-image.png" alt="Case 1 Image">
+            <h3>Case 1</h3>
+            <p>A brief description of Case 1. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+        <div class="case-card">
+            <img src="assets/images/assignments/case2-image.png" alt="Case 2 Image">
+            <h3>Case 2</h3>
+            <p>A brief description of Case 2. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+        <div class="case-card">
+            <img src="assets/images/assignments/case3-image.png" alt="Case 3 Image">
+            <h3>Case 3</h3>
+            <p>A brief description of Case 3. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-<section id="assi3">assi3</section>
+<section id="assi3">
+    <h2>Assignment 3</h2>
+    <div class="case-container">
+        <div class="case-card">
+            <img src="assets/images/assignments/case1-image.png" alt="Case 1 Image">
+            <h3>Case 1</h3>
+            <p>A brief description of Case 1. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+        <div class="case-card">
+            <img src="assets/images/assignments/case2-image.png" alt="Case 2 Image">
+            <h3>Case 2</h3>
+            <p>A brief description of Case 2. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+        <div class="case-card">
+            <img src="assets/images/assignments/case3-image.png" alt="Case 3 Image">
+            <h3>Case 3</h3>
+            <p>A brief description of Case 3. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-<section id="assi4">assi4</section>
-
-
-
+<section id="assi4">
+    <h2>Assignment 4</h2>
+    <div class="case-container">
+        <div class="case-card">
+            <img src="assets/images/assignments/case1-image.png" alt="Case 1 Image">
+            <h3>Case 1</h3>
+            <p>A brief description of Case 1. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+        <div class="case-card">
+            <img src="assets/images/assignments/case2-image.png" alt="Case 2 Image">
+            <h3>Case 2</h3>
+            <p>A brief description of Case 2. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+        <div class="case-card">
+            <img src="assets/images/assignments/case3-image.png" alt="Case 3 Image">
+            <h3>Case 3</h3>
+            <p>A brief description of Case 3. This is where you summarize the main points.</p>
+            <div class="case-buttons">
+                <button class="button button-demo">Demo</button>
+                <button class="button button-view">View</button>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

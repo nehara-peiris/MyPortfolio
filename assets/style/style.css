@@ -776,20 +776,15 @@ body{
         color: white;
         margin-top: 120px;
         margin-bottom: 30px;
-    }
-
-
-    .education h2 {
         padding-bottom: 20px;
     }
 
 
     .education-list {
-        list-style: none;
         display: flex;
         flex-direction: column;
+        gap: 1.5rem;
         align-items: center;
-        justify-content: flex-start;
     }
 
 
@@ -829,38 +824,69 @@ body{
 
     /* Achievements Section */
     .achievements-list {
-        list-style: none;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        gap: 2%;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 1rem;
         justify-items: center;
-        padding: 0;
-        margin: 0;
+        padding: 1rem;
     }
 
 
     .achievement-card {
         background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-        transition: transform 0.3s, box-shadow 0.3s;
-        width: 70%;
-        max-width: 200px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
         text-align: center;
+        padding: 2rem;
+        width: 100%;
+        max-width: 450px;
     }
 
 
     .achievement-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 30px rgba(255, 157, 61, 0.5);
+        transform: translateY(-10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     }
 
+    .achievement-card:hover img {
+        transform: scale(1.5); /* Scale up the image */
+    }
+
+    .achievement-card img {
+        width: 300px;
+        margin-bottom: 1rem;
+    }
+
+    .achievement-card h3 {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+    }
+
+    .achievement-card p {
+        color: #555;
+    }
 
     @media screen and (max-width: 768px) {
         .achievements-list {
             grid-template-columns: repeat(2, 1fr);
         }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .edu-card, .achievement-card {
+        animation: fadeInUp 0.6s ease-out;
     }
 }
 
@@ -874,6 +900,7 @@ body{
         padding: 2rem;
         background: #0F0F0F;
         width: 100%;
+        overflow: hidden;
     }
 
 
