@@ -16,12 +16,6 @@ body {
     line-height: 1.6;
 }
 
-
-*, ::before, ::after {
-    box-sizing: border-box;
-}
-
-
 /* header section */
 body{
 
