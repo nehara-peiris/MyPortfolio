@@ -55,8 +55,7 @@ header nav a {
     cursor: pointer;
 }
 
-
-/* Navigation links */
+/* Desktop styles for the navigation menu */
 #nav-links {
     display: flex;
     gap: 1.5rem;
@@ -79,10 +78,10 @@ header nav a {
     bottom: -0.25rem;
 }
 
-
+/* Mobile styles */
 @media (max-width: 768px) {
-    nav {
-        display: none;
+    #nav-links {
+        display: none; /* Hide by default on mobile */
         flex-direction: column;
         background-color: black;
         position: absolute;
@@ -90,23 +89,23 @@ header nav a {
         right: 0;
         width: 100%;
     }
+
     .menu-icon {
         display: block;
-        right: 5%;
+        cursor: pointer;
     }
 
+    #nav-links.show-menu {
+        display: flex !important; /* Show when 'show-menu' class is added */
+    }
 
-    nav a {
+    #nav-links a {
         padding: 1rem;
         text-align: center;
         display: block;
     }
-
-    .show-menu {
-        display: flex !important; /* Show the menu when active */
-        flex-direction: column;
-    }
 }
+
 
 
 

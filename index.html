@@ -22,9 +22,11 @@
 <!--Header Section-->
 <header>
     <div class="header-content">
-        <a href="index.html"><img src="assets/images/headerNhero/logo.png" title="Logo" alt="Logo" width="100"></a>
+        <a href="index.html">
+            <img src="assets/images/headerNhero/logo.png" title="Logo" alt="Logo" width="100">
+        </a>
 
-        <!-- Add the menu icon -->
+        <!-- Menu Icon -->
         <div class="menu-icon" onclick="toggleMenu()">
             <img src="assets/images/headerNhero/menu.png" alt="Menu" width="40">
         </div>
@@ -398,19 +400,24 @@
 
 
 <script>
+    // Function to toggle the menu visibility
     function toggleMenu() {
         const navLinks = document.getElementById('nav-links');
-        navLinks.classList.toggle('show-menu');
+        navLinks.classList.toggle('show-menu'); // Add/remove 'show-menu'
     }
-    // Close the menu after clicking an option
-    const navLinks = document.querySelectorAll('#nav-links a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const nav = document.getElementById('nav-links');
-            nav.classList.remove('show-menu');
+
+    // Ensure the menu closes after clicking any navigation link
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('#nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.getElementById('nav-links');
+                nav.classList.remove('show-menu'); // Remove 'show-menu' after clicking a link
+            });
         });
     });
 </script>
+
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
