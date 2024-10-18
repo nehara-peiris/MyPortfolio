@@ -34,8 +34,8 @@
     }
 
 
-    /* header section */
-    body{
+    /* Header Section */
+    body {
         .l-header {
             width: 100%;
             position: fixed;
@@ -82,18 +82,18 @@
             bottom: -0.25rem;
         }
 
-        /* MOBILE NAVIGATION */
+        /* Mobile Navigation */
         .menu-active {
             display: block;
         }
 
         @media screen and (max-width: 768px) {
             .menu-icon {
-                display: block;
+                display: block; /* Show menu icon on mobile */
             }
 
             #nav-links {
-                display: none;
+                display: none; /* Hide links by default on mobile */
                 flex-direction: column;
                 background-color: var(--second-color);
                 position: fixed;
@@ -111,8 +111,66 @@
             }
 
             .show-menu {
-                display: flex !important; /* Make sure the menu is visible */
+                display: flex !important; /* Show the menu when active */
                 flex-direction: column;
+            }
+        }
+
+        /* Mobile Small */
+        @media (max-width: 320px) {
+            .header-content {
+                padding: 0.5rem; /* Adjust padding for smaller screens */
+            }
+
+            #nav-links a {
+                font-size: 14px; /* Reduce font size for small screens */
+            }
+        }
+
+        /* Mobile Medium */
+        @media (max-width: 375px) {
+            .header-content {
+                padding: 0.75rem; /* Adjust padding */
+            }
+
+            #nav-links a {
+                font-size: 15px; /* Adjust font size */
+            }
+        }
+
+        /* Mobile Large */
+        @media (max-width: 425px) {
+            .header-content {
+                padding: 0.75rem; /* Adjust padding */
+            }
+
+            #nav-links a {
+                font-size: 16px; /* Adjust font size */
+            }
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            #nav-links {
+                padding: 2rem; /* Keep padding */
+            }
+        }
+
+        /* Laptop */
+        @media (max-width: 1024px) {
+            #nav-links {
+                gap: 1rem; /* Reduce gap between links */
+            }
+
+            #nav-links a {
+                font-size: 16px; /* Adjust font size */
+            }
+        }
+
+        /* Laptop Large */
+        @media (max-width: 1440px) {
+            #nav-links {
+                gap: 1.5rem; /* Keep default gap */
             }
         }
     }
