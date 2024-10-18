@@ -14,8 +14,6 @@
         font-family: Arial, sans-serif;
         color: #333;
         line-height: 1.6;
-        width: 100%;
-        overflow: hidden;
     }
 
 
@@ -43,8 +41,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: var(--z-fixed);
-            background-color: #fff;
+            z-index: 100;
+            background-color: #000000;
             box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
         }
 
