@@ -16,70 +16,106 @@ body {
     line-height: 1.6;
 }
 
+
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+
+    --hue-color: 224;
+    --first-color: hsl(var(--hue-color), 89%, 60%);
+    --second-color: hsl(var(--hue-color), 56%, 12%);
+
+    --body-font: "Poppins", sans-serif;
+    --normal-font-size: .938rem;
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+
+    --z-fixed: 100;
+}
+
+
 /* header section */
 body{
-
-    header {
-        background: black;
-        color: #fff;
-        height: 100px;
+    .l-header {
         width: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 10;
+        z-index: var(--z-fixed);
+        background-color: #fff;
+        box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
     }
-
 
     .header-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 1rem;
     }
 
-
-    .header-content img {
-        margin-left: 1rem;
-    }
-
-
-    header nav a {
-        color: #fff;
-        text-decoration: none;
-        padding: 0 1rem;
-    }
-
-
+    /* Menu icon (hidden on desktop) */
     .menu-icon {
         display: none;
         cursor: pointer;
     }
 
+    /* Navigation links */
+    #nav-links {
+        display: flex;
+        gap: 1.5rem;
+    }
 
-    @media (max-width: 300px) {
-        nav {
-            display: none;
-            flex-direction: column;
-            background-color: black;
-            position: absolute;
-            top: 100px;
-            right: 0;
-            width: 100%;
-        }
+    #nav-links a {
+        color: var(--second-color);
+        text-decoration: none;
+        font-weight: var(--font-semi);
+        position: relative;
+    }
+
+    #nav-links a:hover::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.18rem;
+        background-color: var(--first-color);
+        left: 0;
+        bottom: -0.25rem;
+    }
+
+    /* MOBILE NAVIGATION */
+    .menu-active {
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
         .menu-icon {
             display: block;
-            right: 5%;
         }
 
+        #nav-links {
+            display: none;
+            flex-direction: column;
+            background-color: var(--second-color);
+            position: fixed;
+            top: var(--header-height);
+            right: 0;
+            width: 80%;
+            height: 100%;
+            padding: 2rem;
+            text-align: left;
+        }
 
-        nav a {
-            padding: 1rem;
-            text-align: center;
-            display: block;
+        #nav-links a {
+            color: white;
+            margin-bottom: var(--mb-4);
+        }
+
+        .show-menu {
+            display: flex !important; /* Make sure the menu is visible */
+            flex-direction: column;
         }
     }
 }
-
 
 
 /* Hero Section */
@@ -167,6 +203,36 @@ body{
         to { transform: translateY(0); opacity: 1; }
     }
 
+
+    @media (max-width: 768px) {
+        .hero-content {
+            top: 100px;
+            flex-direction: column;
+        }
+
+        .hero-text {
+            max-width: 90%;
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+        }
+
+        .hero-text h2 {
+            font-size: 1.2rem;
+        }
+
+        .hero-image img {
+            max-width: 75%;
+            background: linear-gradient(to bottom ,#070707, black, orange, black, orangered ,black, orange, black, #070707);
+        }
+
+        #circle {
+            display: none;
+        }
+    }
+
+
 }
 
 
@@ -234,6 +300,32 @@ body{
     .about-me-social img:hover {
         transform: scale(1.1);
     }
+
+
+    @media (max-width: 768px) {
+        .about-me-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .about-me-text {
+            margin-left: 0;
+            max-width: 100%;
+        }
+
+        .about-me-image img {
+            max-width: 90%;
+        }
+
+        .about-me-text h2 {
+            font-size: 2rem;
+        }
+
+        .about-me-text p {
+            font-size: medium;
+        }
+    }
+
 }
 
 
@@ -722,7 +814,17 @@ body{
     }
 
 
+    @media screen and (max-width: 768px) {
+        .edu-card {
+            flex-direction: column;
+            text-align: center;
+        }
 
+
+        .edu-card img {
+            margin-bottom: 1rem;
+        }
+    }
 
 
     /* Achievements Section */
@@ -841,6 +943,16 @@ body{
         background: #0056b3;
     }
 
+    @media screen and (max-width: 768px) {
+        .contact {
+            padding: 1rem;
+        }
+
+        form {
+            padding: 1rem;
+        }
+    }
+
 }
 
 
@@ -938,5 +1050,20 @@ body{
         margin-top: 1rem;
         font-size: 0.9rem;
     }
+
+
+    @media screen and (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .footer-left, .footer-right {
+            padding: 1rem 0;
+            text-align: center;
+        }
+    }
+
 
 }

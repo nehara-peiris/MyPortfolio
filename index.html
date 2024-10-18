@@ -10,8 +10,6 @@
 
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="stylesheet" href="assets/style/responsive.css">
-
 
     <link rel="icon" type="img/x-icon" href="assets/images/headerNhero/logo.png">
 
@@ -29,16 +27,17 @@
 
 
 <!--Header Section-->
-<header>
+<header class="l-header">
     <div class="header-content">
-        <a href="index.html"><img src="assets/images/headerNhero/logo.png" title="Logo" alt="Logo" width="100"></a>
+        <!-- Logo -->
+        <a href="index.html">
+            <img src="assets/images/headerNhero/logo.png" title="Logo" alt="Logo" width="100">
+        </a>
 
-
-        <!-- Add the menu icon -->
+        <!-- Menu icon for mobile view -->
         <div class="menu-icon" onclick="toggleMenu()">
             <img src="assets/images/headerNhero/menu.png" alt="Menu" width="40">
         </div>
-
 
         <!-- Navigation links -->
         <nav id="nav-links">
@@ -512,12 +511,18 @@
 <script>
     function toggleMenu() {
         const navLinks = document.getElementById('nav-links');
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        } else {
-            navLinks.style.display = 'flex';
-        }
+        navLinks.classList.toggle('show-menu');
     }
+
+    // Close the menu after clicking an option
+    const navLinks = document.querySelectorAll('#nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const nav = document.getElementById('nav-links');
+            nav.classList.remove('show-menu');
+        });
+    });
+
 </script>
 
 
