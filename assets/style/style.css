@@ -965,8 +965,8 @@
 
 
     /* Education Section */
-    body {
-
+    body{
+        /* Education Section */
         .education {
             min-height: 100vh;
             width: 100%;
@@ -979,7 +979,7 @@
             margin-top: 120px;
             margin-bottom: 30px;
             padding-bottom: 20px;
-            text-align: center; /* Center text on small screens */
+            text-align: center; /* Center text */
         }
 
         .education-list {
@@ -1024,13 +1024,79 @@
             }
         }
 
+        /* Additional Media Queries for Responsiveness */
+
+        /* Mobile Small */
+        @media (max-width: 320px) {
+            .education h2 {
+                font-size: 1.5em; /* Adjust heading size */
+            }
+
+            .edu-card {
+                padding: 0.5rem; /* Adjust padding */
+            }
+        }
+
+        /* Mobile Medium */
+        @media (max-width: 375px) {
+            .education h2 {
+                font-size: 1.7em; /* Adjust heading size */
+            }
+
+            .edu-card {
+                padding: 0.75rem; /* Adjust padding */
+            }
+        }
+
+        /* Mobile Large */
+        @media (max-width: 425px) {
+            .education h2 {
+                font-size: 1.8em; /* Adjust heading size */
+            }
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .edu-card {
+                max-width: 100%; /* Ensure cards take full width */
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .edu-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    }
 
 
 
+    body{
         /* Achievements Section */
+        .achievements {
+            padding: 2rem;
+            background: #f8f9fa; /* Light background for contrast */
+        }
+
+        .achievements h2 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 30px;
+            text-align: center; /* Center text */
+        }
+
         .achievements-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1rem;
             justify-items: center;
             padding: 1rem;
@@ -1039,11 +1105,11 @@
         .achievement-card {
             background: white;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             text-align: center;
-            padding: 2rem;
-            width: 100%;
+            padding: 1rem;
+            width: 80%;
             max-width: 450px;
         }
 
@@ -1053,7 +1119,7 @@
         }
 
         .achievement-card:hover img {
-            transform: scale(1.5); /* Scale up the image */
+            transform: scale(1.2); /* Scale up the image */
         }
 
         .achievement-card img {
@@ -1073,44 +1139,6 @@
         }
 
         @media screen and (max-width: 768px) {
-
-            .achievements-list {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .achievement-card {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .achievement-card img {
-                margin-bottom: 1rem;
-                max-width: 100%; /* Ensure the image is responsive */
-            }
-
-            .achievement-card p {
-                font-size: 1em; /* Adjust font size for smaller screens */
-            }
-        }
-
-        /* Additional Media Queries for Responsiveness */
-
-        /* Mobile Small */
-        @media (max-width: 320px) {
-            .education h2 {
-                font-size: 1.5em; /* Adjust heading size */
-            }
-
-            .edu-card {
-                padding: 0.5rem; /* Adjust padding */
-            }
-
-            .achievements-list {
-                flex-direction: column;
-                text-align: center;
-            }
-
             .achievement-card {
                 padding: 1.5rem; /* Adjust padding */
             }
@@ -1120,27 +1148,31 @@
             }
         }
 
-        /* Mobile Medium */
-        @media (max-width: 375px) {
-            .education h2 {
-                font-size: 1.7em; /* Adjust heading size */
-            }
 
-            .edu-card {
-                padding: 0.75rem; /* Adjust padding */
+        /* Mobile Small */
+        @media (max-width: 320px) {
+            .achievements h2 {
+                font-size: 1.5em; /* Adjust heading size */
             }
 
             .achievement-card {
-                padding: 1.75rem; /* Adjust padding */
+                padding: 1rem; /* Adjust padding */
+            }
+        }
+
+        /* Mobile Medium */
+        @media (max-width: 375px) {
+            .achievements h2 {
+                font-size: 1.7em; /* Adjust heading size */
+            }
+
+            .achievement-card {
+                padding: 1.5rem; /* Adjust padding */
             }
         }
 
         /* Mobile Large */
         @media (max-width: 425px) {
-            .education h2 {
-                font-size: 1.8em; /* Adjust heading size */
-            }
-
             .achievements-list {
                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             }
@@ -1160,18 +1192,14 @@
         /* Laptop */
         @media (max-width: 1024px) {
             .achievements-list {
-                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            }
-
-            .edu-card {
-                max-width: 90%; /* Slightly reduce max-width */
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             }
         }
 
         /* Laptop Large */
         @media (max-width: 1440px) {
             .achievements-list {
-                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             }
         }
 
@@ -1186,10 +1214,12 @@
             }
         }
 
-        .edu-card, .achievement-card {
+        .achievement-card {
             animation: fadeInUp 0.6s ease-out;
         }
+
     }
+
 
 
     /* Contact Section */
