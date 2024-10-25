@@ -20,7 +20,7 @@ body {
 header {
     background: #000000;
     color: #ffffff;
-    height: 100px;
+    height: 10%;
     width: 100%;
     position: fixed;
     top: 0;
@@ -29,26 +29,21 @@ header {
 
 }
 
-
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
 }
-
 
 .header-content img {
     margin-left: 1rem;
 }
-
 
 header nav a {
     color: #fff;
     text-decoration: none;
     padding: 0 1rem;
 }
-
 
 .menu-icon {
     display: none;
@@ -59,6 +54,7 @@ header nav a {
 #nav-links {
     display: flex;
     gap: 1.5rem;
+
 }
 
 #nav-links a {
@@ -123,7 +119,7 @@ header nav a {
     z-index: 1;
     text-align: center;
     color: white;
-    padding: 12%;
+    padding: 10%;
     animation: fadeIn 2s ease-in;
 
     display: flex;
@@ -254,8 +250,8 @@ header nav a {
     justify-content: space-evenly;
     padding: 5rem;
     background: #000;
-    margin-top: 110px;
-    height: 75%;
+    margin-top: 10%;
+    height: 80%;
     flex-wrap: wrap;
 }
 
@@ -267,7 +263,7 @@ header nav a {
 
 .about-me-image img {
     border-radius: 10px;
-    max-width: 70%;
+    max-width: 80%;
     transition: transform 0.3s ease;
 }
 
@@ -475,7 +471,7 @@ h2 {
     height: 50%;
 }
 
-.project-cards div {
+.project-cards > div {
     background: #1C1C1C;
     border-radius: 10px;
     border: 2px yellow solid;
@@ -487,7 +483,7 @@ h2 {
 }
 
 
-.project-cards div:hover{
+.project-cards > div:hover{
     transform: translateY(-5px);
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
 }
@@ -511,8 +507,22 @@ h2 {
     color: wheat;
 }
 
+.pro-demo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
 
-.project-cards button{
+.pro-demo img{
+    width: 30%;
+}
+
+.pro-demo img:hover{
+    transform: scale(1.1);
+}
+
+.pro-demo button{
     color: white;
     background-color: #B57C00;
     width: 40%;
@@ -520,9 +530,10 @@ h2 {
     border: peru 2px solid;
 }
 
-.project-cards button:hover{
+.pro-demo button:hover{
     background-color: goldenrod;
 }
+
 
 /* Assignment Section */
 .assignment {
@@ -751,68 +762,6 @@ h2 {
     }
 }
 
-/* Education Section */
-.education {
-    min-height: 100vh;
-    width: 100%;
-    padding: 2rem;
-    background: #0F0F0F;
-}
-
-
-.education h2 {
-    color: white;
-    margin-top: 120px;
-    margin-bottom: 30px;
-}
-
-
-.education h2 {
-    padding-bottom: 20px;
-}
-
-
-.education-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-
-.edu-card{
-    margin-bottom: 1rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    width: 100%;
-    max-width: 600px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-.edu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(255, 157, 61, 0.5);
-}
-
-
-@media screen and (max-width: 768px) {
-    .edu-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-
-    .edu-card img {
-        margin-bottom: 1rem;
-    }
-}
 
 
 /* Education Section */
@@ -861,6 +810,9 @@ h2 {
     box-shadow: 0 0 30px rgba(255, 157, 61, 0.5);
 }
 
+.edu-card div{
+    width: 65%;
+}
 
 @media screen and (max-width: 768px) {
     .edu-card {
@@ -958,7 +910,7 @@ h2 {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.1);
+    background: #343a40;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1055,23 +1007,6 @@ footer {
     flex: 1;
     padding: 0 1rem;
 }
-
-
-.about-me-social {
-    margin-bottom: 1rem;
-}
-
-
-.about-me-social a {
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-
-.about-me-social a:hover {
-    transform: scale(1.1);
-}
-
 
 .footer-links h2, .footer-right h2 {
     margin-bottom: 0.5rem;
